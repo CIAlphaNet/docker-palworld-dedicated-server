@@ -133,6 +133,7 @@ RUN ln -s /scripts/backupmanager.sh /usr/local/bin/backup \
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests procps xdg-user-dirs \
     && apt-get clean \
+    && apt-get install nano iproute2 sudo
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
